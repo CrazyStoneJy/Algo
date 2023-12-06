@@ -1,4 +1,5 @@
 import { reduce } from "../src/leetcode2626";
+import { compose } from "../src/leetcode2629";
 import { filter } from "../src/leetcode2634";
 import { map } from "../src/leetcode2635";
 
@@ -23,4 +24,10 @@ describe('leetcode', () => {
         const init = 0;
         expect(reduce(arr, fn, init)).toStrictEqual(10);
     });
+
+    test('2629', () => {
+        const functions = [x => x + 1, x => x * x, x => 2 * x];
+        const x = 4;
+        expect(compose(functions)(x)).toBe(65);
+    })
 });

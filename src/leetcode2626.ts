@@ -4,12 +4,11 @@ export function reduce(nums: number[], fn: Fn, init: number): number {
     let res = 0;
     nums.forEach((value: number, index: number) => {
         if (index === 0) {
-            res += fn(init, value);
+            res = fn(init, value);
         } else {
-            res += fn(res, value);
+            res = fn(res, value);
         }
-        console.log("res: ", res);
-
+        // console.log("res: ", res);
     });
-    return res;
+    return nums.length === 0 ? res + init : res;
 };

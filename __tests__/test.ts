@@ -1,3 +1,4 @@
+import { memoize } from "../src/leetcode2623";
 import { reduce } from "../src/leetcode2626";
 import { compose } from "../src/leetcode2629";
 import { filter } from "../src/leetcode2634";
@@ -42,4 +43,25 @@ describe('leetcode', () => {
         expect(res).toStrictEqual([6, undefined]);
     });
 
+    // test('map', () => {
+    //     const map = {};
+    //     map['2#2'] = 4;
+    //     console.log(Object.keys(map).indexOf('2#2'));
+
+    //     const map2 = new Map<number, number>();
+    //     map[2] = 4;
+    //     console.log(map2.has(2));
+    // });
+
+    test('2623', () => {
+        // actions = ["call","call","getCallCount","call","getCallCount"]
+        // values = [[2,2],[2,2],[],[1,2],[]]
+        let count = 0;
+        const sum = (a, b) => {
+            ++count;
+            return a + b;
+        };
+        const foo = memoize(sum);
+        expect([foo(2, 2), foo(2, 2), count, foo(1, 2), count]).toStrictEqual([4, 4, 1, 3, 2]);
+    });
 });

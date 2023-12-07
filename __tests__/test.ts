@@ -4,6 +4,8 @@ import { compose } from "../src/leetcode2629";
 import { filter } from "../src/leetcode2634";
 import { map } from "../src/leetcode2635";
 import { once } from "../src/leetcode2666";
+import EventEmitter from "../src/leetcode2694";
+import addTwoPromises from "../src/leetcode2723";
 
 describe('leetcode', () => {
     test('2635', () => {
@@ -64,4 +66,23 @@ describe('leetcode', () => {
         const foo = memoize(sum);
         expect([foo(2, 2), foo(2, 2), count, foo(1, 2), count]).toStrictEqual([4, 4, 1, 3, 2]);
     });
+
+    test('2723', async () => {
+        const promise1: Promise<number> = new Promise(resolve => setTimeout(() => resolve(2), 20));
+        const promise2: Promise<number> = new Promise(resolve => setTimeout(() => resolve(5), 60));
+        expect(await addTwoPromises(promise1, promise2)).toBe(7);
+    });
+
+    test('2694', () => {
+        const eventEmitter = new EventEmitter();
+        const sub = eventEmitter.subscribe('firstEvent', x => x + 1);
+        const sub1 = eventEmitter.subscribe('firstEvent', x => x + 2);
+        const sub2 = eventEmitter.subscribe('firstEvent', x => x + 3);
+        expect(eventEmitter.emit('firstEvent', [5])).toStrictEqual([6, 7, 8]);
+        sub1.unsubscribe();
+        sub2.unsubscribe();
+        expect(eventEmitter.emit('firstEvent', [5])).toStrictEqual([6]);
+    })
+
+
 });

@@ -1,4 +1,5 @@
 import { memoize } from "../src/leetcode2623";
+import flat from "../src/leetcode2625";
 import { reduce } from "../src/leetcode2626";
 import { compose } from "../src/leetcode2629";
 import { filter } from "../src/leetcode2634";
@@ -84,5 +85,10 @@ describe('leetcode', () => {
         expect(eventEmitter.emit('firstEvent', [5])).toStrictEqual([6]);
     })
 
+    test('flatten array', () => {
+        const arr = flat([1, 2, [3, 4]], 2);
+        console.log(arr);
+        expect(arr).toStrictEqual([1, 2, 3, 4]);
+    });
 
 });

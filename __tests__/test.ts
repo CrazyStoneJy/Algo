@@ -87,7 +87,7 @@ describe('leetcode', () => {
 
     test('flatten array', () => {
         const arr = flat([1, 2, [3, 4]], 2);
-        console.log(arr);
+        // console.log(arr);
         expect(arr).toStrictEqual([1, 2, 3, 4]);
     });
 

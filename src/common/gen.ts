@@ -1,4 +1,4 @@
-import { ListNode } from "./types";
+import { ListNode } from "./entity";
 
 const FLAG_EMPTY_NODE = -1;
 
@@ -10,4 +10,8 @@ export function genListNode(eles: number[] | null) {
     eles.map((val: number) => new ListNode(val))
         .reduce((pre: ListNode, cur: ListNode) => pre.next = cur, initListNode);
     return initListNode.next;
+}
+
+export function genTreeNode(arr: number[] | null) {
+    
 }

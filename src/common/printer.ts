@@ -1,4 +1,4 @@
-import { ListNode } from "./types";
+import { ListNode } from "./entity";
 type Callback = (node: ListNode) => void;
 
 export function printListNode(root: ListNode, callback?: Callback) {

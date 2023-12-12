@@ -1,6 +1,6 @@
 import { genListNode } from "../src/common/gen";
 import { printListNode } from "../src/common/printer";
-import { ListNode } from "../src/common/types";
+import { ListNode } from "../src/common/entity";
 import { mergeTwoLists } from "../src/list/leetcode21";
 
 describe('linked list', () => {
@@ -24,4 +24,5 @@ describe('linked list', () => {
         printListNode(mergeTwoLists(node1, node2), callback);
         expect(newArr).toStrictEqual([1, 1, 2, 3, 4, 4]);
     })
+
 });

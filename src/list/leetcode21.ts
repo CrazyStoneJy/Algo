@@ -1,4 +1,4 @@
-import { ListNode } from "../common/types";
+import { ListNode } from "../common/entity";
 
 export function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
     let cur1 = list1;

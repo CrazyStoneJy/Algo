@@ -1,3 +1,4 @@
+import { minTimeToType } from "../src/leetcode1974";
 import { memoize } from "../src/leetcode2623";
 import flat from "../src/leetcode2625";
 import { reduce } from "../src/leetcode2626";
@@ -89,6 +90,13 @@ describe('leetcode', () => {
         const arr = flat([1, 2, [3, 4]], 2);
         // console.log(arr);
         expect(arr).toStrictEqual([1, 2, 3, 4]);
+    });
+
+    test('test 1974', () => {
+        const word = "bza";
+        const count = minTimeToType(word);
+        expect(count).toBe(7);
+        console.log("count: ", count);
     });
 
 });

@@ -96,7 +96,13 @@ describe('leetcode', () => {
         const word = "bza";
         const count = minTimeToType(word);
         expect(count).toBe(7);
-        console.log("count: ", count);
+        // console.log("count: ", count);
     });
+    
+    test('test flat', () => { 
+        const matrix: number[][] = [[1,2,3],[4,5,6],[7,8,9]];
+        // console.log(matrix.flat(1));
+        
+     })
 
 });

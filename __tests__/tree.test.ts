@@ -11,7 +11,7 @@ describe('tree', () => {
         rootII.left = new TreeNode(2);
         rootII.right = new TreeNode(4);
 
-        console.log(root == rootII, root, rootII);
+        // console.log(root == rootII, root, rootII);
         
         expect(root).toStrictEqual(rootII);
 

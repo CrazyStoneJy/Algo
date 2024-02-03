@@ -1,3 +1,4 @@
+import { minSubArrayLen } from "../src/leetcode209";
 import { convert, findWords, ocontain, output } from "../src/leetcode212";
 import { longestPalindrome } from "../src/leetcode5";
 
@@ -27,5 +28,10 @@ describe('leetcode', () => {
     })
 
 
+    test('209', () => {
+        const target = 7, nums = [2,3,1,2,4,3];
+        minSubArrayLen(target, nums);
+        
+    })
     
 })

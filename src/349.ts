@@ -19,7 +19,7 @@
 // 1 <= nums1.length, nums2.length <= 1000
 // 0 <= nums1[i], nums2[i] <= 1000
 
-function intersection(nums1: number[], nums2: number[]): number[] {
+function intersection349(nums1: number[], nums2: number[]): number[] {
     let res = []
     let set = new Set()
     // traverse nums1

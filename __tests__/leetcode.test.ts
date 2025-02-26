@@ -1,4 +1,5 @@
 import { divisorSubstrings } from "../src/2269";
+import { countPairs } from "../src/2284";
 import { minSubArrayLen } from "../src/leetcode209";
 import { convert, findWords, ocontain, output } from "../src/leetcode212";
 import { longestPalindrome } from "../src/leetcode5";
@@ -37,6 +38,13 @@ describe('leetcode', () => {
 
     test("2269", () => {
         divisorSubstrings(430043, 2)
+    })
+
+
+    test('2284', () => {
+        const nums = [6,-1,7,4,2,3]
+        const target = 8
+        countPairs(nums, target)
     })
     
 })

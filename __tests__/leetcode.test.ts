@@ -1,5 +1,7 @@
+import { addTwoNumbers } from "../src/2";
 import { divisorSubstrings } from "../src/2269";
 import { countPairs } from "../src/2284";
+import { genListNode } from "../src/common/gen";
 import { minSubArrayLen } from "../src/leetcode209";
 import { convert, findWords, ocontain, output } from "../src/leetcode212";
 import { longestPalindrome } from "../src/leetcode5";
@@ -36,15 +38,21 @@ describe('leetcode', () => {
         
     // })
 
-    test("2269", () => {
-        divisorSubstrings(430043, 2)
-    })
+    // test("2269", () => {
+    //     divisorSubstrings(430043, 2)
+    // })
 
 
-    test('2284', () => {
-        const nums = [6,-1,7,4,2,3]
-        const target = 8
-        countPairs(nums, target)
-    })
+    // test('2284', () => {
+    //     const nums = [6,-1,7,4,2,3]
+    //     const target = 8
+    //     countPairs(nums, target)
+    // })
     
+    test("2", () => {
+        let l1 = genListNode([9, 9, 9, 9, 9, 9, 9])
+        let l2 = genListNode([9, 9, 9, 9])
+        addTwoNumbers(l1, l2)
+    })
+
 })
